@@ -1,0 +1,62 @@
+GP on 416 runs: Q2 0.9676, CV RMSE 3.20 MPa
+
+[1] formulas (R = 0.1 load line, Kf = 1.66)
+  goodman  sa* = (ratio*UTS/Kf) / (1 + (0.55/0.45)*ratio/Kf)
+  gerber   sa* = (-1 + sqrt(1 + 4*k*sD)) / (2*k), sD = ratio*UTS/Kf, k = sD*(0.55/0.45)^2/UTS^2
+  swt      sa* = sqrt(0.45) * ratio*UTS/Kf
+  max |closed form - numerical root| over 300 random (UTS, ratio): {'goodman': '8.53e-14 MPa', 'gerber': '2.22e-11 MPa', 'swt': '5.68e-14 MPa'}
+
+[2] nominal sa* (UTS 900, ratio 0.5)
+   {'goodman': 198.141, 'gerber': 241.844, 'swt': 181.849} | Table 2: goodman 198.14, gerber 241.84
+
+[3] Pf
+criterion  Pf_limit_state  Pf_V2prime   Pf_V1  mc_se_V2prime
+  goodman         0.97991     0.97991 0.93648     0.00022187
+   gerber         0.33608     0.33608 0.34197     0.00074688
+criterion               method  disagreements_with_g<0  g<0_but_N>=1e6  g>=0_but_N<1e6
+  goodman    V2prime: sa > sa*                       0             NaN             NaN
+  goodman       V2prime: N<1e6                       0             NaN             NaN
+  goodman V1 fixed line: N<1e6                   17370         17370.0             0.0
+   gerber    V2prime: sa > sa*                       0             NaN             NaN
+   gerber       V2prime: N<1e6                       0             NaN             NaN
+   gerber V1 fixed line: N<1e6                    9203          3424.0          5779.0
+      swt    V2prime: sa > sa*                       0             NaN             NaN
+
+[5] Table 12 format
+criterion       variant                       scatter_included     N_p05  N_median     N_p95  P_N_below_1e6     mc_se
+  goodman       V2prime                      inputs+force only 9.624e+04 1.648e+05 2.823e+05              1         0
+  goodman       V2prime                     + material scatter 2.981e+04 1.619e+05  7.11e+05         0.9799 0.0002219
+  goodman       V2prime + life scatter, log10 SD 0.2 (ASSUMED) 2.557e+04 1.609e+05 8.571e+05         0.9644 0.0002928
+  goodman V1_fixed_line                      inputs+force only 9.994e+04 1.711e+05 2.931e+05              1         0
+  goodman V1_fixed_line                     + material scatter  1.94e+04 1.688e+05 1.141e+06         0.9365 0.0003856
+   gerber       V2prime                      inputs+force only 8.928e+05 1.991e+06 4.444e+06        0.07912 0.0004268
+   gerber       V2prime                     + material scatter 1.247e+05 1.937e+06 2.049e+07         0.3361 0.0007469
+   gerber       V2prime + life scatter, log10 SD 0.2 (ASSUMED) 1.138e+05 1.927e+06 2.313e+07         0.3433 0.0007508
+   gerber V1_fixed_line                      inputs+force only 9.775e+05  2.18e+06 4.866e+06        0.05498 0.0003604
+   gerber V1_fixed_line                     + material scatter 8.477e+04 2.136e+06 3.694e+07          0.342   0.00075
+
+[4] V1 endpoint / sa*
+criterion                                                               ratio  V1_endpoint_MPa  sa_star_MPa  V1_over_sa_star
+  goodman                                                                 0.4              159        167.5           0.9493
+  goodman                                                                 0.5            198.8        198.1            1.003
+  goodman                                                                 0.6            238.6        225.6            1.057
+  goodman                                                                0.65            258.4        238.3            1.084
+  goodman                                              mean over 400k samples            198.8        197.8            1.003
+  goodman                                                     sd over samples              NaN          NaN          0.02694
+  goodman UTS-only variation at ratio 0.5 (min..max of V1/sa* over UTS 5-95%)              NaN          NaN         2.22e-16
+   gerber                                                                 0.4            194.5        200.7           0.9689
+   gerber                                                                 0.5            243.1        241.8            1.005
+   gerber                                                                 0.6            291.8        278.7            1.047
+   gerber                                                                0.65            316.1        295.6            1.069
+   gerber                                              mean over 400k samples            243.2        241.3            1.006
+   gerber                                                     sd over samples              NaN          NaN           0.0195
+   gerber UTS-only variation at ratio 0.5 (min..max of V1/sa* over UTS 5-95%)              NaN          NaN                0
+criterion        region  share_of_samples  disagreements  share_of_disagreements  mean_V1_over_sa_star
+  goodman  ratio > 0.55             0.159          16105                  0.9272                 1.044
+  goodman  ratio > 0.50            0.5007          17369                  0.9999                 1.025
+  goodman ratio <= 0.50            0.4993              1               5.757e-05                0.9818
+   gerber  ratio > 0.55             0.159             40                0.004346                 1.037
+   gerber  ratio > 0.50            0.5007           2615                  0.2841                 1.022
+   gerber ratio <= 0.50            0.4993           6588                  0.7159                0.9904
+  goodman: V1/sa* ~ 0.7334 + 0.5400 * ratio  (linear fit over ratio 0.3-0.7; residual max 2.22e-16)
+  gerber: V1/sa* ~ 0.8165 + 0.3863 * ratio  (linear fit over ratio 0.3-0.7; residual max 6.37e-03)

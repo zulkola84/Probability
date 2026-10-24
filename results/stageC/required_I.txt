@@ -1,0 +1,3 @@
+beam-theory I for K=361.5 N/mm (E=105 GPa, spans 38/156): 130.9 mm^4
+beam-theory I for K=363.5 N/mm (E=105 GPa, spans 38/156): 131.6 mm^4
+beam-theory I for K=393.6 N/mm (E=105 GPa, spans 38/156): 142.5 mm^4

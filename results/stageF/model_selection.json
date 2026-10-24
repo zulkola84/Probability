@@ -1,0 +1,28 @@
+{
+  "GP": {
+    "kernel": "9.85**2 * RBF(length_scale=[19.1, 17, 1e+03, 215, 37.4]) + WhiteKernel(noise_level=0.0323)"
+  },
+  "NeuralNet": {
+    "best": {
+      "regressor__alpha": "1.0",
+      "regressor__hidden_layer_sizes": "(64, 64)"
+    },
+    "cv_rmse": 3.323508747244818
+  },
+  "GradBoost": {
+    "best": {
+      "learning_rate": "0.05",
+      "max_depth": "2",
+      "n_estimators": "600",
+      "subsample": "0.7"
+    },
+    "cv_rmse": 3.847151843441167
+  },
+  "PCE": {
+    "best": {
+      "degree": 2,
+      "sparse_LARS": false
+    },
+    "cv_rmse": 3.2845487232538
+  }
+}

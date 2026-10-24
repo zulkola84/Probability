@@ -1,0 +1,22 @@
+{
+  "cv": {
+    "n_holdout_width_varying": 256,
+    "RMSE_MPa": 1.7917842986058887,
+    "bias_MPa": 0.017944458138923647,
+    "Q2": 0.998932162509895,
+    "max_abs_MPa": 6.6470050385918285,
+    "max_abs_pct_of_peak": 0.8017162900982372,
+    "mean_peak_MPa": 860.53428125,
+    "cv_wall_s": 15.47261070899549,
+    "RMSE_MPa_edge_|w-16.365|>0.75": 1.096800601385705,
+    "RMSE_MPa_inner": 1.969686297503771,
+    "poor_fit_flag": false
+  },
+  "stress_sd_W0": 24.670264327215392,
+  "stress_sd_W1": 35.65202655052305,
+  "stress_sd_W2": 57.58541092646864,
+  "gp_slope_MPa_per_mm": -90.80552526551318,
+  "n_old_runs": 256,
+  "n_new_FE_runs": 13,
+  "kernel": "11.7**2 * RBF(length_scale=[37.2, 34, 1e+03, 749, 96.4, 8.89]) + WhiteKernel(noise_level=0.0054)"
+}

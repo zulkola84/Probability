@@ -1,0 +1,30 @@
+{
+  "surrogate_q2": 0.9688554274411814,
+  "surrogate_cv_rmse_MPa": 3.16526632999256,
+  "n_mc": 400000,
+  "criteria": {
+    "goodman": {
+      "Pf_at_1200N": 0.9801300000000002,
+      "Pf_ci95": [
+        0.9796399375000001,
+        0.9806275624999999
+      ],
+      "Pf_FORM": 0.9786664683429227,
+      "beta": -2.0269545271992575,
+      "predicted_runout_N": 1023.807887672686,
+      "runout_error_pct": -14.682676027276164
+    },
+    "gerber": {
+      "Pf_at_1200N": 0.3375775,
+      "Pf_ci95": [
+        0.3365699374999999,
+        0.3385875625
+      ],
+      "Pf_FORM": 0.3331813448342831,
+      "beta": 0.43114534737567756,
+      "predicted_runout_N": 1249.6226154767237,
+      "runout_error_pct": 4.135217956393644
+    }
+  },
+  "note": "UTS CV 3%, endurance-ratio SD 0.05, force CV 2% and the FE-input spreads are assumptions; the mean values follow Bologna et al. 2023. Predicted runout is a validation check against 1200 N."
+}

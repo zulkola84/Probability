@@ -1,0 +1,19 @@
+criterion,ratio_sd,ratio_cv_pct,uts_cv_pct_at_crossover,how,n_uts_cv_points
+goodman,0.0001,0.02,2.3482936717189973,interpolated (linear in CV),10
+goodman,0.005,1.0,2.2457408752203043,interpolated (linear in CV),10
+goodman,0.01,2.0,1.90143349370995,interpolated (linear in CV),10
+goodman,0.02,4.0,,none (strength group larger at all tested UTS CV),10
+goodman,0.03,6.0,,none (strength group larger at all tested UTS CV),10
+goodman,0.05,10.0,,none (strength group larger at all tested UTS CV),10
+gerber,0.0001,0.02,1.9232542897002332,interpolated (linear in CV),10
+gerber,0.005,1.0,1.7395215563912014,interpolated (linear in CV),10
+gerber,0.01,2.0,1.0054258078542293,interpolated (linear in CV),10
+gerber,0.02,4.0,,none (strength group larger at all tested UTS CV),10
+gerber,0.03,6.0,,none (strength group larger at all tested UTS CV),10
+gerber,0.05,10.0,,none (strength group larger at all tested UTS CV),10
+swt,0.0001,0.02,2.5572760086475794,interpolated (linear in CV),10
+swt,0.005,1.0,2.352326935401406,interpolated (linear in CV),10
+swt,0.01,2.0,1.5864478906960557,interpolated (linear in CV),10
+swt,0.02,4.0,,none (strength group larger at all tested UTS CV),10
+swt,0.03,6.0,,none (strength group larger at all tested UTS CV),10
+swt,0.05,10.0,,none (strength group larger at all tested UTS CV),10

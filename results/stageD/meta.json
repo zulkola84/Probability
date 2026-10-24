@@ -1,0 +1,9 @@
+{
+  "peterson_a_mm":0.1137480137,
+  "peterson_q":0.9716603999,
+  "surrogate_q2":0.9675526359,
+  "surrogate_cv_rmse":3.2049115546,
+  "n_fe":416.0,
+  "n_mc":400000.0,
+  "n_sobol_base":8192.0
+}

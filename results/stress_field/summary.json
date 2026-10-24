@@ -1,0 +1,31 @@
+{
+  "hole_size_mm": 0.3,
+  "global_size_mm": 3.0,
+  "nodes": 23801,
+  "force_at_unit_disp_N": 471.448,
+  "scale_to_1200N": 2.5453496461963994,
+  "stiffness_N_per_mm": 471.448,
+  "peak_vm_run_ccx_MPa": null,
+  "width_mm": 16.365,
+  "E_MPa": 105000.0,
+  "nu": 0.33,
+  "peak_von_mises_MPa": 858.959638579358,
+  "peak_sxx_MPa": 860.0787361490557,
+  "peak_location_mm": [
+    0.0,
+    3.9,
+    0.0
+  ],
+  "overall_peak_von_mises_MPa": 859.1288811419694,
+  "overall_peak_sxx_MPa": -860.2161850299503,
+  "overall_peak_z_mm": 5.12,
+  "tension_face_z_mm": 0.0,
+  "nominal_rect_net_MPa": 609.2826455779335,
+  "nominal_paper_I_MPa": 552.099886492622,
+  "Kt_rect_net": 1.411625199554519,
+  "Kt_vs_paper_nominal": 1.5558047730024969,
+  "paper_peak_FE_MPa": 857.8,
+  "diff_vs_paper_FE_pct": 0.15491736325128347,
+  "deflection_at_load_line_edge_mm": 2.550130309466333,
+  "beam_deflection_at_load_line_mm": 2.3742165623141585
+}

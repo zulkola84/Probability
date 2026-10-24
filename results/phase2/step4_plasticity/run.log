@@ -1,0 +1,111 @@
+elastic stiffness (stress_field) 471.448 N/mm, displacement for 1200 N 2.5453 mm; quarter model force scaling x4 (RF of LOAD set)
+mesh: 23801 nodes, output set 99 nodes, hole size 0.3 mm
+/Users/zulkifli/Python/monte_carlo/.venv/lib/python3.14/site-packages/sklearn/gaussian_process/kernels.py:455: ConvergenceWarning: The optimal value found for dimension 2 of parameter k1__k2__length_scale is close to the specified upper bound 1000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/Users/zulkifli/Python/monte_carlo/.venv/lib/python3.14/site-packages/sklearn/gaussian_process/kernels.py:455: ConvergenceWarning: The optimal value found for dimension 2 of parameter k1__k2__length_scale is close to the specified upper bound 1000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/Users/zulkifli/Python/monte_carlo/.venv/lib/python3.14/site-packages/sklearn/gaussian_process/kernels.py:455: ConvergenceWarning: The optimal value found for dimension 2 of parameter k1__k2__length_scale is close to the specified upper bound 1000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/Users/zulkifli/Python/monte_carlo/.venv/lib/python3.14/site-packages/sklearn/gaussian_process/kernels.py:455: ConvergenceWarning: The optimal value found for dimension 2 of parameter k1__k2__length_scale is close to the specified upper bound 1000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+/Users/zulkifli/Python/monte_carlo/.venv/lib/python3.14/site-packages/sklearn/gaussian_process/kernels.py:455: ConvergenceWarning: The optimal value found for dimension 2 of parameter k1__k2__length_scale is close to the specified upper bound 1000.0. Increasing the bound and calling fit again may find a better value.
+  warnings.warn(
+critical node 4 at (0.0, 3.9, 0.0); elastic sxx at the first peak 860.08 MPa at F = 1200.00 N (stress_field.py, scaled to 1200 N: 860.08)
+            case  solve  u_max  u_min  F_max_N  F_min_N  converged_search  wall_s  n_increments
+         elastic      1  2.647  0.356 1248.000  168.000             False  24.115             6
+         elastic      2  2.545  0.153 1200.000   72.000             False  24.731             6
+         elastic      3  2.545  0.255 1200.000  120.000              True  25.228             6
+yield650_ASSUMED      1  2.647  0.356 1247.384  167.383             False 261.633            36
+yield650_ASSUMED      2  2.546  0.155 1200.102   72.719             False 252.507            36
+yield650_ASSUMED      3  2.546  0.255 1200.000  119.898              True 249.783            36
+yield750_ASSUMED      1  2.647  0.356 1247.916  167.915             False 258.132            36
+yield750_ASSUMED      2  2.545  0.153 1200.032   72.116             False 248.037            36
+yield750_ASSUMED      3  2.545  0.255 1200.000  119.968              True 248.554            36
+yield850_ASSUMED      1  2.647  0.356 1247.999  167.999             False 258.348            36
+yield850_ASSUMED      2  2.545  0.153 1200.001   72.002             False 247.892            36
+yield850_ASSUMED      3  2.545  0.255 1200.000  119.999              True 248.777            36
+
+NLGEOM check (750 MPa ASSUMED)
+      state  F_linear_geom_N  F_nlgeom_N  sxx_linear_geom  sxx_nlgeom  sxx_diff_pct  sxx_nlgeom_scaled_to_same_force  diff_pct_same_force  vm_linear_geom  vm_nlgeom  peeq_linear_geom  peeq_nlgeom
+cycle 1 max        1200.0000   1188.8580         753.5270    753.6560        0.0171                         760.7193               0.9545        752.4920   752.4518            0.0012       0.0011
+cycle 1 min         119.9681    119.8258         -20.5681    -14.8390      -27.8543                         -14.8566             -27.7686         20.8455    15.5029            0.0012       0.0011
+cycle 3 max        1200.0000   1188.8580         753.5260    753.6550        0.0171                         760.7183               0.9545        752.4910   752.4510            0.0012       0.0011
+cycle 3 min         119.9681    119.8258         -20.5682    -14.8392      -27.8537                         -14.8568             -27.7680         20.8456    15.5030            0.0012       0.0011
+geometry  amplitude_c3  mean_c3  F_max_N  amplitude_vs_linear_pct  mean_vs_linear_pct
+  linear      387.0471 366.4789 1200.000                   0.0000              0.0000
+  NLGEOM      384.2471 369.4079 1188.858                  -0.7234              0.7992
+
+Critical node
+                                    0                 1                 2                 3
+case                          elastic  yield650_ASSUMED  yield750_ASSUMED  yield850_ASSUMED
+F_c1_max                       1200.0            1200.0            1200.0            1200.0
+F_c1_min                        120.0         119.89792         119.96812         119.99928
+F_c3_max                       1200.0            1200.0            1200.0            1200.0
+F_c3_min                        120.0         119.89792         119.96812         119.99928
+sxx_c1_max                     860.08            655.65           753.527            860.08
+sxx_c1_min                     86.008          -118.495          -20.5681           86.0075
+sxx_c3_max                     860.08            655.65           753.526            860.08
+sxx_c3_min                     86.008          -118.495          -20.5682           86.0075
+vm_c1_max                  858.960901        656.513886         752.49195        858.960901
+vm_c1_min                    85.89609        116.668992         20.845451         85.895591
+vm_c3_max                  858.960901        656.513886        752.491018        858.960901
+vm_c3_min                    85.89609        116.668992         20.845571         85.895591
+amplitude_c3_sxx              387.036          387.0725          387.0471         387.03625
+mean_c3_sxx                   473.044          268.5775          366.4789         473.04375
+peeq_after_c1                     0.0          0.002383           0.00119               0.0
+peeq_after_c3                     0.0          0.002383           0.00119               0.0
+peeq_at_c1_max                    0.0          0.002383           0.00119               0.0
+peeq_at_c3_max                    0.0          0.002383           0.00119               0.0
+plastic_zone_mm_c1_max            0.0          0.579948          0.144987               0.0
+plastic_zone_mm_c3_max            0.0          0.579948          0.144987               0.0
+next_nonplastic_node_mm      0.144987          0.724935          0.289974          0.144987
+solver_wall_s_final_solve   25.227551        249.782802         248.55411         248.77695
+n_increments                        6                36                36                36
+sxx_c3_max_vs_elastic_pct         0.0        -23.768719        -12.388848               0.0
+amplitude_vs_elastic_pct          0.0          0.009431          0.002868          0.000065
+mean_vs_elastic_pct               0.0        -43.223569        -22.527524         -0.000053
+local_R_c3                        0.1         -0.180729         -0.027296          0.099999
+f_cycle1                          1.0          0.762313          0.876113               1.0
+f_cycle3                          1.0          0.762313          0.876112               1.0
+
+plastic zone
+            case  state  zone_mm_along_net_section_tension_face  next_node_beyond_zone_mm  max_peeq_on_path
+yield650_ASSUMED c1_max                                  0.5799                    0.7249            0.0024
+yield650_ASSUMED c1_min                                  0.5799                    0.7249            0.0024
+yield650_ASSUMED c3_max                                  0.5799                    0.7249            0.0024
+yield650_ASSUMED c3_min                                  0.5799                    0.7249            0.0024
+yield750_ASSUMED c1_max                                  0.1450                    0.2900            0.0012
+yield750_ASSUMED c1_min                                  0.1450                    0.2900            0.0012
+yield750_ASSUMED c3_max                                  0.1450                    0.2900            0.0012
+yield750_ASSUMED c3_min                                  0.1450                    0.2900            0.0012
+yield850_ASSUMED c1_max                                  0.0000                    0.1450            0.0000
+yield850_ASSUMED c1_min                                  0.0000                    0.1450            0.0000
+yield850_ASSUMED c3_max                                  0.0000                    0.1450            0.0000
+yield850_ASSUMED c3_min                                  0.0000                    0.1450            0.0000
+
+Pf exploratory (ASSUMED)
+              case criterion                             variant     Pf  dPf_vs_baseline  mc_se                   factors
+elastic (baseline)   goodman                                   - 0.9800           0.0000 0.0002                       NaN
+  yield650_ASSUMED   goodman              V_f: peak x f(cycle 3) 0.1062          -0.8738 0.0005                  f=0.7623
+  yield650_ASSUMED   goodman V_loc: amplitude, mean from cycle 3 0.6548          -0.3252 0.0008 amp x1.0001, mean x0.5678
+  yield750_ASSUMED   goodman              V_f: peak x f(cycle 3) 0.6313          -0.3488 0.0008                  f=0.8761
+  yield750_ASSUMED   goodman V_loc: amplitude, mean from cycle 3 0.8765          -0.1036 0.0005 amp x1.0000, mean x0.7747
+  yield850_ASSUMED   goodman              V_f: peak x f(cycle 3) 0.9800           0.0000 0.0002                  f=1.0000
+  yield850_ASSUMED   goodman V_loc: amplitude, mean from cycle 3 0.9800           0.0000 0.0002 amp x1.0000, mean x1.0000
+elastic (baseline)    gerber                                   - 0.3365           0.0000 0.0007                       NaN
+  yield650_ASSUMED    gerber              V_f: peak x f(cycle 3) 0.0018          -0.3347 0.0001                  f=0.7623
+  yield650_ASSUMED    gerber V_loc: amplitude, mean from cycle 3 0.1451          -0.1915 0.0006 amp x1.0001, mean x0.5678
+  yield750_ASSUMED    gerber              V_f: peak x f(cycle 3) 0.0424          -0.2941 0.0003                  f=0.8761
+  yield750_ASSUMED    gerber V_loc: amplitude, mean from cycle 3 0.2102          -0.1263 0.0006 amp x1.0000, mean x0.7747
+  yield850_ASSUMED    gerber              V_f: peak x f(cycle 3) 0.3365           0.0000 0.0007                  f=1.0000
+  yield850_ASSUMED    gerber V_loc: amplitude, mean from cycle 3 0.3365           0.0000 0.0007 amp x1.0000, mean x1.0000
+elastic (baseline)       swt                                   - 0.9932           0.0000 0.0001                       NaN
+  yield650_ASSUMED       swt              V_f: peak x f(cycle 3) 0.4071          -0.5861 0.0008                  f=0.7623
+  yield650_ASSUMED       swt V_loc: amplitude, mean from cycle 3 0.8545          -0.1387 0.0006 amp x1.0001, mean x0.5678
+  yield750_ASSUMED       swt              V_f: peak x f(cycle 3) 0.8620          -0.1312 0.0005                  f=0.8761
+  yield750_ASSUMED       swt V_loc: amplitude, mean from cycle 3 0.9616          -0.0317 0.0003 amp x1.0000, mean x0.7747
+  yield850_ASSUMED       swt              V_f: peak x f(cycle 3) 0.9932           0.0000 0.0001                  f=1.0000
+  yield850_ASSUMED       swt V_loc: amplitude, mean from cycle 3 0.9932           0.0000 0.0001 amp x1.0000, mean x1.0000
+
+warnings / wall times:
+{'yield650_ASSUMED': [], 'yield750_ASSUMED': [], 'yield850_ASSUMED': [], 'elastic': ['*WARNING in calinput: PEEQ-output requested'], 'nlgeom': []} {'yield650_ASSUMED': 249.78280186653137, 'yield750_ASSUMED': 248.55410981178284, 'yield850_ASSUMED': 248.77695035934448, 'elastic': 25.227550506591797, 'nlgeom': 220.37477254867554}

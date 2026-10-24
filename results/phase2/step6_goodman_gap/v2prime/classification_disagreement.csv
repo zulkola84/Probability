@@ -1,0 +1,8 @@
+criterion,method,disagreements_with_g<0,g<0_but_N>=1e6,g>=0_but_N<1e6
+goodman,V2prime: sa > sa*,0,,
+goodman,V2prime: N<1e6,0,,
+goodman,V1 fixed line: N<1e6,17370,17370.0,0.0
+gerber,V2prime: sa > sa*,0,,
+gerber,V2prime: N<1e6,0,,
+gerber,V1 fixed line: N<1e6,9203,3424.0,5779.0
+swt,V2prime: sa > sa*,0,,

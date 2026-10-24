@@ -1,0 +1,16 @@
+{
+  "nominal": {
+    "sigma_nom_MPa": 609.2826455779335,
+    "Kt_a_fixed_FE": 1.411625199554519,
+    "Kt_b_Howland_at_d7.8": 2.173948094769765,
+    "peak_a_MPa": 860.0787361490557,
+    "peak_b_MPa": 1324.5488465304306,
+    "FE_peak_vm_stress_field_MPa": 859.1288811419694,
+    "d_over_W": 0.4766269477543538
+  },
+  "gp_all_q2": 0.9675526358769742,
+  "gp_all_cv_rmse": 3.2049115545870825,
+  "n_mc": 400000,
+  "n_sobol_base": 8192,
+  "note": "Kt version (b) is ASSUMED (in-plane tension formula, source not confirmed for this loading)."
+}

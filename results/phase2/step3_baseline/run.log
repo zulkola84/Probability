@@ -1,0 +1,87 @@
+nominal sigma_nom = 609.28 MPa (summary.json nominal_rect_net_MPa 609.28)
+{'sigma_nom_MPa': 609.2826455779335, 'Kt_a_fixed_FE': 1.411625199554519, 'Kt_b_Howland_at_d7.8': 2.173948094769765, 'peak_a_MPa': 860.0787361490557, 'peak_b_MPa': 1324.5488465304306, 'FE_peak_vm_stress_field_MPa': 859.1288811419694, 'd_over_W': 0.4766269477543538}
+                   model            test_subset  n  RMSE_MPa  bias_MPa  max_abs_err_MPa  max_abs_err_pct_of_peak         Q2
+                      GP                    all 84    2.8897   -0.3807           7.2203                   0.8587     0.9735
+                      GP             DOE points 52    2.3266   -0.7556           6.3829                   0.7304     0.9856
+                      GP active-learning points 32    3.6226    0.2283           7.2203                   0.8587     0.9330
+     closed_form_a_Kt_FE                    all 84    4.6481    2.7333          12.4930                   1.4620     0.9315
+     closed_form_a_Kt_FE             DOE points 52    4.2218    2.2966          12.0766                   1.3819     0.9527
+     closed_form_a_Kt_FE active-learning points 32    5.2677    3.4429          12.4930                   1.4620     0.8583
+closed_form_b_Kt_Howland                    all 84  467.5202  467.3807         497.4135                  56.0772  -692.3557
+closed_form_b_Kt_Howland             DOE points 52  468.0695  467.8806         497.4135                  56.0190  -580.6660
+closed_form_b_Kt_Howland active-learning points 32  466.6262  466.5682         479.2001                  56.0772 -1110.5611
+GP check vs Stage F: RMSE 2.890 (Stage F 2.89), Q2 0.9735 (0.9735)
+    input     GP  closed_form_a_Kt_FE  closed_form_b_Kt_Howland
+thickness -1.906               -2.000                    -2.000
+   hole_d  0.598                0.911                     0.761
+        E  0.001                0.000                     0.000
+       nu  0.017                0.000                     0.000
+lever_arm  1.075                1.000                     1.000
+    force  1.000                1.000                     1.000
+                  method criterion     Pf  mc_se  peak_mean_MPa  peak_sd_MPa
+                      GP   goodman 0.9800 0.0002       856.9369      24.6958
+                      GP    gerber 0.3365 0.0007       856.9369      24.6958
+                      GP       swt 0.9932 0.0001       856.9369      24.6958
+     closed_form_a_Kt_FE   goodman 0.9820 0.0002       860.3228      25.6083
+     closed_form_a_Kt_FE    gerber 0.3521 0.0008       860.3228      25.6083
+     closed_form_a_Kt_FE       swt 0.9939 0.0001       860.3228      25.6083
+closed_form_b_Kt_Howland   goodman 1.0000 0.0000      1324.9255      39.1283
+closed_form_b_Kt_Howland    gerber 1.0000 0.0000      1324.9255      39.1283
+closed_form_b_Kt_Howland       swt 1.0000 0.0000      1324.9255      39.1283
+                  method criterion  Pf_method  Pf_GP   diff  se_independent  se_paired_CRN  abs_diff_over_se_independent  within_1.96se_independent  within_1.96se_paired  n_classified_differently  mean_peak_diff_MPa  rms_peak_diff_MPa
+     closed_form_a_Kt_FE   goodman     0.9820 0.9800 0.0019          0.0003         0.0001                        6.2799                      False                 False                       897              3.3859             4.1695
+     closed_form_a_Kt_FE    gerber     0.3521 0.3365 0.0156          0.0011         0.0002                       14.6639                      False                 False                      6659              3.3859             4.1695
+     closed_form_a_Kt_FE       swt     0.9939 0.9932 0.0006          0.0002         0.0000                        3.5495                      False                 False                       286              3.3859             4.1695
+closed_form_b_Kt_Howland   goodman     1.0000 0.9800 0.0200          0.0002         0.0002                       90.2759                      False                 False                      7987            467.9887           468.2152
+closed_form_b_Kt_Howland    gerber     1.0000 0.3365 0.6635          0.0007         0.0007                      888.0671                      False                 False                    265395            467.9887           468.2152
+closed_form_b_Kt_Howland       swt     1.0000 0.9932 0.0068          0.0001         0.0001                       52.1767                      False                 False                      2704            467.9887           468.2152
+criterion  offset_removed_MPa  Pf_cf_a_shifted  Pf_GP    diff  se_independent  within_1.96se_independent
+  goodman              3.3859           0.9794 0.9800 -0.0006          0.0003                      False
+   gerber              3.3859           0.3367 0.3365  0.0002          0.0011                       True
+      swt              3.3859           0.9931 0.9932 -0.0002          0.0002                       True
+                  method criterion  Pf_FORM    beta  converged
+                      GP   goodman   0.9782 -2.0170       True
+                      GP    gerber   0.3309  0.4373       True
+                      GP       swt   0.9928 -2.4463       True
+     closed_form_a_Kt_FE   goodman   0.9806 -2.0661       True
+     closed_form_a_Kt_FE    gerber   0.3490  0.3881       True
+     closed_form_a_Kt_FE       swt   0.9935 -2.4858       True
+closed_form_b_Kt_Howland   goodman   1.0000 -6.4431      False
+closed_form_b_Kt_Howland    gerber   1.0000 -5.1977       True
+closed_form_b_Kt_Howland       swt   1.0000 -4.9498      False
+method                        GP  closed_form_a_Kt_FE  closed_form_b_Kt_Howland
+criterion variable                                                             
+gerber    E                0.000                0.000                     0.000
+          endurance_ratio  0.800                0.794                     0.580
+          force            0.044                0.044                     0.130
+          hole_d           0.002                0.005                     0.010
+          lever_arm        0.007                0.006                     0.019
+          nu               0.000                0.000                     0.000
+          thickness        0.038                0.042                     0.124
+          uts              0.108                0.108                     0.139
+goodman   E                0.000                0.000                     0.000
+          endurance_ratio  0.696                0.687                     0.411
+          force            0.082                0.081                     0.205
+          hole_d           0.004                0.009                     0.016
+          lever_arm        0.014                0.012                     0.030
+          nu               0.000                0.000                     0.000
+          thickness        0.070                0.078                     0.196
+          uts              0.135                0.134                     0.142
+swt       E                0.000                0.000                     0.000
+          endurance_ratio  0.815                0.809                     0.699
+          force            0.053                0.053                     0.109
+          hole_d           0.003                0.006                     0.009
+          lever_arm        0.009                0.008                     0.016
+          nu               0.000                0.000                     0.000
+          thickness        0.046                0.051                     0.104
+          uts              0.074                0.073                     0.063
+method                    criterion
+GP                        gerber             endurance_ratio > uts > force
+                          goodman            endurance_ratio > uts > force
+                          swt                endurance_ratio > uts > force
+closed_form_a_Kt_FE       gerber             endurance_ratio > uts > force
+                          goodman            endurance_ratio > uts > force
+                          swt                endurance_ratio > uts > force
+closed_form_b_Kt_Howland  gerber             endurance_ratio > uts > force
+                          goodman      endurance_ratio > force > thickness
+                          swt          endurance_ratio > force > thickness

@@ -1,0 +1,98 @@
+GP on 416 runs: Q2 0.9676, CV RMSE 3.20 MPa
+
+[1] Basquin constants (Bologna 2023 Table 2): FIXED constants, not recomputed per sample
+  goodman  A = 670.53 MPa, b = -0.088; A*1e3^b = 365.11, A*1e6^b = 198.80 MPa
+  gerber   A = 549.36 MPa, b = -0.059; A*1e3^b = 365.47, A*1e6^b = 243.14 MPa
+  Per-sample material scatter enters only as A_i = A * ratio_i*UTS_i/450 (stage_e.py: scale), b stays fixed.
+  Nominal amplitude, life (stage_e.py):   sa = (1-R)/2 * peak / KT_B = 0.45 * peak / 1.66  (R = 0.1, KT_B = 1.66)
+  Nominal amplitude, limit state (fatigue.py g_fun): sn = peak/KT_B; sa = (1-R)/2*sn = 0.45*peak/1.66 -> identical
+  Resistance, life:        sa_fail(1e6) = A*scale*1e6^b = (A*1e6^b/450) * ratio*UTS   [no Kf, no per-sample mean stress]
+  Resistance, limit state: allow = ratio*UTS/Kf * (1 - sm/UTS) (Goodman) or *(1-(sm/UTS)^2) (Gerber), sm = (1+R)/2*sn = 0.55*peak/1.66, Kf = Kt = 1.66
+  Differences: (i) Kf: 1.66 in the limit state, not explicit in the life line; (ii) the mean-stress correction is recomputed per sample (via sm and UTS_i) in the limit state, and fixed at the Table 2 endpoint in V1.
+
+[4] fixed-line check at nominal inputs
+                                                              0               1
+criterion                                               goodman          gerber
+A_b_endpoint_1e6_MPa                                 198.800839      243.140348
+table2_1e6_MPa                                           198.14          241.84
+endpoint_vs_table2_pct                                 0.333521        0.537689
+limit_state_allowable_nominal_GP_MPa                 185.640098        244.1528
+limit_state_allowable_paper_FE_peak_MPa              185.478662      244.050936
+limit_state_allowable_paper_analytical_peak_MPa      181.456852      241.451175
+limit_state_vs_fixed_endpoint_pct                     -6.620063        0.416406
+nominal_GP_peak_MPa                                  856.182348      856.182348
+N_at_nominal_GP_peak                              172094.602448  2198575.276832
+N_paper_analytical_peak                            99971.460258   977920.606692
+N_paper_FE_peak                                    168442.49085  2129349.225314
+mean_of_criteria_N_analytical                     538946.033475   538946.033475
+mean_of_criteria_N_FE                            1148895.858082  1148895.858082
+published_N_analytical                                   575000          575000
+published_N_FE                                          1000000         1000000
+
+[2,3] Pf and supporting numbers
+criterion                                        method        Pf      mc_se
+  goodman                            limit_state_P(g<0)   0.97991 0.00022187
+  goodman                                 V1_fixed_line   0.93648 0.00038563
+  goodman                            V2_per_sample_line   0.97991 0.00022187
+  goodman         V3_recalibrated_fixed_line_DIAGNOSTIC   0.98769 0.00017436
+  goodman          info: mean fixed-line endpoint (MPa)    198.83        NaN
+  goodman        info: mean limit-state allowable (MPa)    185.59        NaN
+  goodman          info: mean(endpoint_fixed/allowable)    1.0722        NaN
+  goodman            info: sd(endpoint_fixed/allowable)  0.020631        NaN
+  goodman info: corr(log endpoint_fixed, log allowable)   0.98552        NaN
+  goodman       info: V2 non-positive allowable (count)         0        NaN
+  goodman                       info: V2 slope b_i mean -0.098531        NaN
+  goodman                         info: V2 slope b_i sd   0.01489        NaN
+  goodman                 info: V3 recalibrated A (MPa)    626.14        NaN
+  goodman     info: nominal limit-state allowable (MPa)    185.64        NaN
+   gerber                            limit_state_P(g<0)   0.33608 0.00074688
+   gerber                                 V1_fixed_line   0.34197 0.00075004
+   gerber                            V2_per_sample_line   0.33608 0.00074688
+   gerber         V3_recalibrated_fixed_line_DIAGNOSTIC   0.32853 0.00074263
+   gerber          info: mean fixed-line endpoint (MPa)    243.18        NaN
+   gerber        info: mean limit-state allowable (MPa)     244.1        NaN
+   gerber          info: mean(endpoint_fixed/allowable)   0.99653        NaN
+   gerber            info: sd(endpoint_fixed/allowable) 0.0092243        NaN
+   gerber info: corr(log endpoint_fixed, log allowable)   0.99646        NaN
+   gerber       info: V2 non-positive allowable (count)         0        NaN
+   gerber                       info: V2 slope b_i mean -0.058812        NaN
+   gerber                         info: V2 slope b_i sd   0.01469        NaN
+   gerber                 info: V3 recalibrated A (MPa)    551.65        NaN
+   gerber     info: nominal limit-state allowable (MPa)    244.15        NaN
+
+classification disagreement vs g<0
+criterion                                method  disagree_total  g_lt0_but_N_ge_1e6  g_ge0_but_N_lt_1e6
+  goodman                         V1_fixed_line           17370               17370                   0
+  goodman                    V2_per_sample_line               0                   0                   0
+  goodman V3_recalibrated_fixed_line_DIAGNOSTIC            3335                 111                3224
+   gerber                         V1_fixed_line            9203                3424                5779
+   gerber                    V2_per_sample_line               0                   0                   0
+   gerber V3_recalibrated_fixed_line_DIAGNOSTIC            9118                6069                3049
+
+[6] Table 12 with variants
+criterion                               variant                       scatter_included     N_p05  N_median     N_p95  P_N_below_1e6     mc_se
+  goodman                         V1_fixed_line                      inputs+force only 9.994e+04 1.711e+05 2.931e+05              1         0
+  goodman                         V1_fixed_line                     + material scatter  1.94e+04 1.688e+05 1.141e+06         0.9365 0.0003856
+  goodman                         V1_fixed_line + life scatter, log10 SD 0.2 (ASSUMED) 1.721e+04 1.678e+05  1.32e+06          0.921 0.0004265
+  goodman                    V2_per_sample_line                      inputs+force only  5.44e+04 1.009e+05 1.932e+05              1         0
+  goodman                    V2_per_sample_line                     + material scatter 2.903e+04 9.875e+04 5.724e+05         0.9799 0.0002219
+  goodman                    V2_per_sample_line + life scatter, log10 SD 0.2 (ASSUMED) 2.326e+04  1.01e+05 6.684e+05         0.9738 0.0002526
+  goodman V3_recalibrated_fixed_line_DIAGNOSTIC                      inputs+force only 4.589e+04 7.858e+04 1.346e+05              1         0
+  goodman V3_recalibrated_fixed_line_DIAGNOSTIC                     + material scatter      8908  7.75e+04  5.24e+05         0.9877 0.0001744
+  goodman V3_recalibrated_fixed_line_DIAGNOSTIC + life scatter, log10 SD 0.2 (ASSUMED)      7904 7.703e+04 6.062e+05         0.9805 0.0002189
+   gerber                         V1_fixed_line                      inputs+force only 9.775e+05  2.18e+06 4.866e+06        0.05498 0.0003604
+   gerber                         V1_fixed_line                     + material scatter 8.477e+04 2.136e+06 3.694e+07          0.342   0.00075
+   gerber                         V1_fixed_line + life scatter, log10 SD 0.2 (ASSUMED) 7.847e+04 2.129e+06 4.092e+07         0.3467 0.0007525
+   gerber                    V2_per_sample_line                      inputs+force only 8.697e+05 2.369e+06 6.663e+06        0.07912 0.0004268
+   gerber                    V2_per_sample_line                     + material scatter  1.64e+05 2.288e+06 4.176e+08         0.3361 0.0007469
+   gerber                    V2_per_sample_line + life scatter, log10 SD 0.2 (ASSUMED) 1.468e+05 2.332e+06  4.43e+08         0.3368 0.0007473
+   gerber V3_recalibrated_fixed_line_DIAGNOSTIC                      inputs+force only 1.049e+06  2.34e+06 5.221e+06         0.0404 0.0003113
+   gerber V3_recalibrated_fixed_line_DIAGNOSTIC                     + material scatter 9.095e+04 2.292e+06 3.964e+07         0.3285 0.0007426
+   gerber V3_recalibrated_fixed_line_DIAGNOSTIC + life scatter, log10 SD 0.2 (ASSUMED) 8.419e+04 2.285e+06 4.391e+07         0.3334 0.0007454
+
+Stage E file check (V1 should match):
+criterion            variant  P_N_below_1e6
+  goodman  inputs+force only       1.000000
+  goodman + material scatter       0.936480
+   gerber  inputs+force only       0.054980
+   gerber + material scatter       0.341965

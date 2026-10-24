@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+scikit-learn
+salib
+gmsh
+meshio
+matplotlib
+openturns
+pytest

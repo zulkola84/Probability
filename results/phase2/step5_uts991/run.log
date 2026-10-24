@@ -1,0 +1,80 @@
+GP on 416 runs: Q2 0.9676, CV RMSE 3.20 MPa
+
+[3] Table 2 amplitudes (198.14 Goodman, 241.84 Gerber; 1e3 anchor 364.50) and the UTS they imply (ratio 0.5, Kf 1.66)
+                                                0           1
+criterion                                 goodman      gerber
+table2_1e6_MPa                             198.14      241.84
+sa_star_at_UTS900                        198.1409  241.843565
+sa_star_at_UTS991                      218.175147  266.296637
+UTS_implied_by_table2                  899.995911  899.986731
+ratio_needed_at_UTS991_to_give_table2    0.439236    0.444658
+UTS_implied_by_1e3_anchor_364.50            900.0       900.0
+  sa* SWT at 900 / 991: 181.8489017846215 200.23584629839985
+
+[1,2] Pf / FORM / runout / sa*
+               case  uts_mean  uts_cv criterion       Pf      mc_se  Pf_FORM     beta  FORM_converged  runout_load_N  runout_vs_1200_pct  sa_star_nominal_at_case_mean  sa_star_nominal_UTS900  sa_star_nominal_UTS991
+          A_900_cv3       900    0.03   goodman  0.98003 0.00022118  0.97815   -2.017            True         1024.4              -14.63                        198.14                  198.14                  218.18
+          A_900_cv3       900    0.03    gerber  0.33651 0.00074711  0.33094  0.43731            True         1250.4              4.1991                        241.84                  241.84                   266.3
+          A_900_cv3       900    0.03       swt  0.99324 0.00012956  0.99278  -2.4463            True          940.2              -21.65                        181.85                  181.85                  200.24
+          B_991_cv3       991    0.03   goodman    0.783 0.00065175  0.77597 -0.75865            True           1128             -5.9985                        218.18                  198.14                  218.18
+          B_991_cv3       991    0.03    gerber 0.081995  0.0004338  0.08073   1.4002            True         1376.8              14.735                         266.3                  241.84                   266.3
+          B_991_cv3       991    0.03       swt  0.92687 0.00041165  0.92438  -1.4352            True         1035.3             -13.728                        200.24                  181.85                  200.24
+C_945.5_cv5_ASSUMED     945.5    0.05   goodman  0.89418 0.00048637  0.88823  -1.2172            True         1076.2             -10.314                        208.16                  198.14                  218.18
+C_945.5_cv5_ASSUMED     945.5    0.05    gerber  0.19771 0.00062972  0.19286  0.86741            True         1313.6              9.4669                        254.07                  241.84                   266.3
+C_945.5_cv5_ASSUMED     945.5    0.05       swt  0.96442 0.00029288  0.96258  -1.7814            True         987.73             -17.689                        191.04                  181.85                  200.24
+
+Sobol ST
+case                       A_900_cv3  B_991_cv3  C_945.5_cv5_ASSUMED
+criterion variable                                                  
+gerber    E                    0.000      0.000                0.000
+          endurance_ratio      0.800      0.824                0.685
+          force                0.044      0.035                0.033
+          hole_d               0.002      0.002                0.002
+          lever_arm            0.007      0.006                0.005
+          nu                   0.000      0.000                0.000
+          thickness            0.038      0.030                0.028
+          uts                  0.108      0.104                0.248
+goodman   E                    0.000      0.000                0.000
+          endurance_ratio      0.696      0.734                0.581
+          force                0.082      0.065                0.059
+          hole_d               0.004      0.003                0.003
+          lever_arm            0.014      0.011                0.010
+          nu                   0.000      0.000                0.000
+          thickness            0.070      0.056                0.051
+          uts                  0.135      0.131                0.298
+swt       E                    0.000      0.000                0.000
+          endurance_ratio      0.815      0.831                0.728
+          force                0.053      0.045                0.043
+          hole_d               0.003      0.002                0.002
+          lever_arm            0.009      0.007                0.007
+          nu                   0.000      0.000                0.000
+          thickness            0.046      0.038                0.037
+          uts                  0.074      0.076                0.183
+case                 criterion
+A_900_cv3            gerber       endurance_ratio > uts > force
+                     goodman      endurance_ratio > uts > force
+                     swt          endurance_ratio > uts > force
+B_991_cv3            gerber       endurance_ratio > uts > force
+                     goodman      endurance_ratio > uts > force
+                     swt          endurance_ratio > uts > force
+C_945.5_cv5_ASSUMED  gerber       endurance_ratio > uts > force
+                     goodman      endurance_ratio > uts > force
+                     swt          endurance_ratio > uts > force
+
+[4] V2' life at 1200 N
+               case criterion  V2prime_N_p05  V2prime_N_median  V2prime_N_p95  P_N_below_1e6  disagreements_with_g<0
+          A_900_cv3   goodman      2.962e+04         1.617e+05      7.094e+05           0.98                       0
+          A_900_cv3    gerber      1.229e+05         1.938e+06      2.038e+07         0.3365                       0
+          B_991_cv3   goodman       8.85e+04         4.832e+05      2.119e+06          0.783                       0
+          B_991_cv3    gerber      6.291e+05         9.919e+06      1.043e+08        0.08199                       0
+C_945.5_cv5_ASSUMED   goodman      4.403e+04         2.791e+05      1.475e+06         0.8942                       0
+C_945.5_cv5_ASSUMED    gerber      2.268e+05         4.358e+06      5.987e+07         0.1977                       0
+
+Pf ordering per case: {'A_900_cv3': 'swt > goodman > gerber', 'B_991_cv3': 'swt > goodman > gerber', 'C_945.5_cv5_ASSUMED': 'swt > goodman > gerber'}
+
+[6]
+     case criterion  load_at_Pf_0.5_N  Pf_at_1200N
+A_900_cv3    gerber       1247.383371      0.33485
+A_900_cv3   goodman       1022.287786      0.98345
+B_991_cv3    gerber       1373.773157      0.07858
+B_991_cv3   goodman       1125.485129      0.78969
