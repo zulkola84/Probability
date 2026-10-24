@@ -30,7 +30,7 @@ Python 3.10 or later, the packages in `requirements.txt`, and [CalculiX](http://
     python fe/fatigue.py            # limit states, Monte Carlo, FORM, runout load
     python fe/active_learning.py    # refinement near the failure boundary
 
-Later scripts (`stage_*.py`, `width_cases.py`, `uts_cases.py`, `plasticity_check.py`, `closed_form_baseline.py`, `strength_crossover.py`, `goodman_gap*.py`) write to `results/`. Random seeds are fixed in the scripts; failure probabilities from separate sample sets agree to the third decimal place.
+Later scripts (`stage_*.py`, `width_cases.py`, `uts_cases.py`, `plasticity_check.py`, `closed_form_baseline.py`, `strength_crossover.py`, `goodman_gap*.py`) write to `results/`. Scripts that sample randomly use fixed seeds; failure probabilities from separate sample sets agree to the third decimal place.
 
 ## Key results (1200 N runout load, R = 0.1)
 
