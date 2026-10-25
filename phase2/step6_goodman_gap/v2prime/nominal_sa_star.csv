@@ -1,0 +1,4 @@
+criterion,sa_star_nominal,table2_1e6,formula,closed_form_vs_numeric_max_abs_MPa
+goodman,198.1409001956947,198.14,sa* = (ratio*UTS/Kf) / (1 + (0.55/0.45)*ratio/Kf),8.526512829121202e-14
+gerber,241.84356549381772,241.84,"sa* = (-1 + sqrt(1 + 4*k*sD)) / (2*k), sD = ratio*UTS/Kf, k = sD*(0.55/0.45)^2/UTS^2",2.2225776774575934e-11
+swt,181.8489017846215,,sa* = sqrt(0.45) * ratio*UTS/Kf,5.684341886080802e-14

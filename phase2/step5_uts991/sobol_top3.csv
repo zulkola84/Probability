@@ -1,0 +1,10 @@
+case,criterion,top3_ST
+A_900_cv3,gerber,endurance_ratio > uts > force
+A_900_cv3,goodman,endurance_ratio > uts > force
+A_900_cv3,swt,endurance_ratio > uts > force
+B_991_cv3,gerber,endurance_ratio > uts > force
+B_991_cv3,goodman,endurance_ratio > uts > force
+B_991_cv3,swt,endurance_ratio > uts > force
+C_945.5_cv5_ASSUMED,gerber,endurance_ratio > uts > force
+C_945.5_cv5_ASSUMED,goodman,endurance_ratio > uts > force
+C_945.5_cv5_ASSUMED,swt,endurance_ratio > uts > force

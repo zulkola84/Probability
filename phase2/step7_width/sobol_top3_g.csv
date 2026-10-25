@@ -1,0 +1,10 @@
+case,output,top3_ST
+W0,g_gerber,endurance_ratio > uts > force
+W0,g_goodman,endurance_ratio > uts > force
+W0,g_swt,endurance_ratio > uts > force
+W1,g_gerber,endurance_ratio > uts > width
+W1,g_goodman,endurance_ratio > width > uts
+W1,g_swt,endurance_ratio > width > uts
+W2,g_gerber,endurance_ratio > width > uts
+W2,g_goodman,width > endurance_ratio > uts
+W2,g_swt,endurance_ratio > width > uts

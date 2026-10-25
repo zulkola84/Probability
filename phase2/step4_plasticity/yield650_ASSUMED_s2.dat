@@ -1,0 +1,270 @@
+
+                        S T E P       1
+
+
+                                INCREMENT     1
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.1666667E+00
+
+        7.002903E-12  8.355051E+00 -5.002008E+01
+
+                                INCREMENT     2
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.3333333E+00
+
+        1.864559E-11  1.671010E+01 -1.000402E+02
+
+                                INCREMENT     3
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.5000000E+00
+
+        4.193181E-11  2.506515E+01 -1.500602E+02
+
+                                INCREMENT     4
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.6666667E+00
+
+       -1.907197E-12  3.342020E+01 -2.000803E+02
+
+                                INCREMENT     5
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.8333333E+00
+
+       -1.231639E-10  4.177487E+01 -2.500981E+02
+
+                                INCREMENT     6
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.1000000E+01
+
+        1.260558E-10  5.011446E+01 -3.000256E+02
+
+                        S T E P       2
+
+
+                                INCREMENT     1
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.1166667E+01
+
+       -4.560478E-11  4.226816E+01 -2.530513E+02
+
+                                INCREMENT     2
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.1333333E+01
+
+       -3.819485E-11  3.442186E+01 -2.060770E+02
+
+                                INCREMENT     3
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.1500000E+01
+
+        1.566842E-11  2.657555E+01 -1.591027E+02
+
+                                INCREMENT     4
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.1666667E+01
+
+       -1.031950E-11  1.872925E+01 -1.121284E+02
+
+                                INCREMENT     5
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.1833333E+01
+
+       -8.670646E-12  1.088295E+01 -6.515405E+01
+
+                                INCREMENT     6
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.2000000E+01
+
+        2.038797E-12  3.036642E+00 -1.817975E+01
+
+                        S T E P       3
+
+
+                                INCREMENT     1
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.2166667E+01
+
+        4.419521E-12  1.088295E+01 -6.515405E+01
+
+                                INCREMENT     2
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.2333333E+01
+
+       -2.488928E-11  1.872925E+01 -1.121284E+02
+
+                                INCREMENT     3
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.2500000E+01
+
+       -6.925628E-11  2.657555E+01 -1.591027E+02
+
+                                INCREMENT     4
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.2666667E+01
+
+        8.669838E-11  3.442186E+01 -2.060770E+02
+
+                                INCREMENT     5
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.2833333E+01
+
+       -5.725420E-11  4.226816E+01 -2.530513E+02
+
+                                INCREMENT     6
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.3000000E+01
+
+       -1.045575E-10  5.011446E+01 -3.000256E+02
+
+                        S T E P       4
+
+
+                                INCREMENT     1
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.3166667E+01
+
+       -2.920374E-12  4.226816E+01 -2.530513E+02
+
+                                INCREMENT     2
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.3333333E+01
+
+        2.374558E-11  3.442186E+01 -2.060770E+02
+
+                                INCREMENT     3
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.3500000E+01
+
+        5.597896E-14  2.657555E+01 -1.591027E+02
+
+                                INCREMENT     4
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.3666667E+01
+
+       -2.010540E-11  1.872925E+01 -1.121284E+02
+
+                                INCREMENT     5
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.3833333E+01
+
+        1.849917E-11  1.088295E+01 -6.515405E+01
+
+                                INCREMENT     6
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.4000000E+01
+
+       -6.233763E-13  3.036642E+00 -1.817975E+01
+
+                        S T E P       5
+
+
+                                INCREMENT     1
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.4166667E+01
+
+        2.439253E-11  1.088295E+01 -6.515405E+01
+
+                                INCREMENT     2
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.4333333E+01
+
+       -9.816242E-12  1.872925E+01 -1.121284E+02
+
+                                INCREMENT     3
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.4500000E+01
+
+       -3.091797E-12  2.657555E+01 -1.591027E+02
+
+                                INCREMENT     4
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.4666667E+01
+
+       -2.976582E-11  3.442186E+01 -2.060770E+02
+
+                                INCREMENT     5
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.4833333E+01
+
+       -5.177616E-11  4.226816E+01 -2.530513E+02
+
+                                INCREMENT     6
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.5000000E+01
+
+       -4.754658E-11  5.011446E+01 -3.000256E+02
+
+                        S T E P       6
+
+
+                                INCREMENT     1
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.5166667E+01
+
+        1.963156E-11  4.226816E+01 -2.530513E+02
+
+                                INCREMENT     2
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.5333333E+01
+
+        1.428506E-11  3.442186E+01 -2.060770E+02
+
+                                INCREMENT     3
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.5500000E+01
+
+       -2.158702E-11  2.657555E+01 -1.591027E+02
+
+                                INCREMENT     4
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.5666667E+01
+
+       -8.226243E-12  1.872925E+01 -1.121284E+02
+
+                                INCREMENT     5
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.5833333E+01
+
+       -9.301392E-13  1.088295E+01 -6.515405E+01
+
+                                INCREMENT     6
+
+
+ total force (fx,fy,fz) for set LOAD and time  0.6000000E+01
+
+        6.749683E-13  3.036642E+00 -1.817975E+01

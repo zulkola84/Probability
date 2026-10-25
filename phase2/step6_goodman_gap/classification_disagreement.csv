@@ -1,0 +1,7 @@
+criterion,method,disagree_total,g_lt0_but_N_ge_1e6,g_ge0_but_N_lt_1e6
+goodman,V1_fixed_line,17370,17370,0
+goodman,V2_per_sample_line,0,0,0
+goodman,V3_recalibrated_fixed_line_DIAGNOSTIC,3335,111,3224
+gerber,V1_fixed_line,9203,3424,5779
+gerber,V2_per_sample_line,0,0,0
+gerber,V3_recalibrated_fixed_line_DIAGNOSTIC,9118,6069,3049

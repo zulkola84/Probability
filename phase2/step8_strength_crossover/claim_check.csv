@@ -1,0 +1,4 @@
+criterion,cases,cases_strength_group_ST_ge_0.5,cases_strength_group_gt_geom_load,min_strength_group_ST
+gerber,42.0,36.0,39.0,0.10720972679593094
+goodman,42.0,32.0,36.0,0.0592125344487127
+swt,42.0,34.0,38.0,0.08440811766429024

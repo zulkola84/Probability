@@ -1,0 +1,22 @@
+case,criterion,variant,Pf,dPf_vs_baseline,mc_se,factors
+elastic (baseline),goodman,-,0.9800325,0.0,0.0002211831760314854,
+yield650_ASSUMED,goodman,V_f: peak x f(cycle 3),0.1062,-0.8738325,0.00048713848133769927,f=0.7623
+yield650_ASSUMED,goodman,"V_loc: amplitude, mean from cycle 3",0.654805,-0.3252275,0.0007517237058504275,"amp x1.0001, mean x0.5678"
+yield750_ASSUMED,goodman,V_f: peak x f(cycle 3),0.63126,-0.34877249999999993,0.000762841419300237,f=0.8761
+yield750_ASSUMED,goodman,"V_loc: amplitude, mean from cycle 3",0.8764625,-0.10356999999999994,0.0005202787380187421,"amp x1.0000, mean x0.7747"
+yield850_ASSUMED,goodman,V_f: peak x f(cycle 3),0.9800325,0.0,0.0002211831760314854,f=1.0000
+yield850_ASSUMED,goodman,"V_loc: amplitude, mean from cycle 3",0.9800325,0.0,0.0002211831760314854,"amp x1.0000, mean x1.0000"
+elastic (baseline),gerber,-,0.3365125,0.0,0.000747114176923029,
+yield650_ASSUMED,gerber,V_f: peak x f(cycle 3),0.001765,-0.3347475,6.636800386858113e-05,f=0.7623
+yield650_ASSUMED,gerber,"V_loc: amplitude, mean from cycle 3",0.1450525,-0.19146,0.0005568039876018984,"amp x1.0001, mean x0.5678"
+yield750_ASSUMED,gerber,V_f: peak x f(cycle 3),0.0423775,-0.294135,0.00031851863169110687,f=0.8761
+yield750_ASSUMED,gerber,"V_loc: amplitude, mean from cycle 3",0.21021,-0.12630249999999998,0.0006442471495862438,"amp x1.0000, mean x0.7747"
+yield850_ASSUMED,gerber,V_f: peak x f(cycle 3),0.3365125,0.0,0.000747114176923029,f=1.0000
+yield850_ASSUMED,gerber,"V_loc: amplitude, mean from cycle 3",0.336515,2.500000000016378e-06,0.0007471155445695799,"amp x1.0000, mean x1.0000"
+elastic (baseline),swt,-,0.99324,0.0,0.00012955985489340426,
+yield650_ASSUMED,swt,V_f: peak x f(cycle 3),0.4071,-0.58614,0.0007768036914175936,f=0.7623
+yield650_ASSUMED,swt,"V_loc: amplitude, mean from cycle 3",0.8545175,-0.13872249999999997,0.0005574884352920471,"amp x1.0001, mean x0.5678"
+yield750_ASSUMED,swt,V_f: peak x f(cycle 3),0.8620025,-0.1312375,0.0005453306107164488,f=0.8761
+yield750_ASSUMED,swt,"V_loc: amplitude, mean from cycle 3",0.9615675,-0.03167249999999999,0.0003039549429757229,"amp x1.0000, mean x0.7747"
+yield850_ASSUMED,swt,V_f: peak x f(cycle 3),0.99324,0.0,0.00012955985489340426,f=1.0000
+yield850_ASSUMED,swt,"V_loc: amplitude, mean from cycle 3",0.99324,0.0,0.00012955985489340426,"amp x1.0000, mean x1.0000"

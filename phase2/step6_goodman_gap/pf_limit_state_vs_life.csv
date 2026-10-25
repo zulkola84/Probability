@@ -1,0 +1,29 @@
+criterion,method,Pf,mc_se
+goodman,limit_state_P(g<0),0.979905,0.00022187378717978366
+goodman,V1_fixed_line,0.93648,0.00038563327657244526
+goodman,V2_per_sample_line,0.979905,0.00022187378717978366
+goodman,V3_recalibrated_fixed_line_DIAGNOSTIC,0.9876875,0.00017436242674204462
+goodman,info: mean fixed-line endpoint (MPa),198.83389891941263,
+goodman,info: mean limit-state allowable (MPa),185.5915697966841,
+goodman,info: mean(endpoint_fixed/allowable),1.07219021979444,
+goodman,info: sd(endpoint_fixed/allowable),0.020630853196241025,
+goodman,"info: corr(log endpoint_fixed, log allowable)",0.9855212429456641,
+goodman,info: V2 non-positive allowable (count),0.0,
+goodman,info: V2 slope b_i mean,-0.09853137389094846,
+goodman,info: V2 slope b_i sd,0.014889513570165413,
+goodman,info: V3 recalibrated A (MPa),626.1404907126629,
+goodman,info: nominal limit-state allowable (MPa),185.64009811170783,
+gerber,limit_state_P(g<0),0.3360775,0.0007468758497798512
+gerber,V1_fixed_line,0.341965,0.0007500415634733185
+gerber,V2_per_sample_line,0.3360775,0.0007468758497798512
+gerber,V3_recalibrated_fixed_line_DIAGNOSTIC,0.3285275,0.0007426257161985269
+gerber,info: mean fixed-line endpoint (MPa),243.18078147581346,
+gerber,info: mean limit-state allowable (MPa),244.0967390591999,
+gerber,info: mean(endpoint_fixed/allowable),0.9965306431440283,
+gerber,info: sd(endpoint_fixed/allowable),0.009224260689543937,
+gerber,"info: corr(log endpoint_fixed, log allowable)",0.9964585446548366,
+gerber,info: V2 non-positive allowable (count),0.0,
+gerber,info: V2 slope b_i mean,-0.058811913738619166,
+gerber,info: V2 slope b_i sd,0.014689879081114389,
+gerber,info: V3 recalibrated A (MPa),551.6475691966361,
+gerber,info: nominal limit-state allowable (MPa),244.1527997685386,

@@ -1,0 +1,84 @@
+found earlier width run: /Users/zulkifli/Python/monte_carlo/results/old_with_width/fe_samples.csv (256 runs, width 15.369-17.359); verification: 8 reruns, max |diff| 3.233 MPa (0.37 % of peak), RMS diff 1.267 MPa, max stiffness diff 0.0174 N/mm; fixed-width runs 416
+  fold 0: RMSE 1.306 MPa (52 held-out width-varying points)
+  fold 1: RMSE 1.417 MPa (51 held-out width-varying points)
+  fold 2: RMSE 1.728 MPa (51 held-out width-varying points)
+  fold 3: RMSE 2.368 MPa (51 held-out width-varying points)
+  fold 4: RMSE 1.944 MPa (51 held-out width-varying points)
+n_holdout_width_varying          256.000000
+RMSE_MPa                           1.791784
+bias_MPa                           0.017944
+Q2                                 0.998932
+max_abs_MPa                        6.647005
+max_abs_pct_of_peak                0.801716
+mean_peak_MPa                    860.534281
+cv_wall_s                         15.472611
+RMSE_MPa_edge_|w-16.365|>0.75      1.096801
+RMSE_MPa_inner                     1.969686
+final GP: 11.7**2 * RBF(length_scale=[37.2, 34, 1e+03, 749, 96.4, 8.89]) + WhiteKernel(noise_level=0.0054) (1.9 s)
+ width_mm  GP_peak_MPa  FE_peak_MPa  GP_minus_FE_MPa  GP_vs_published_857.8_pct  FE_vs_published_857.8_pct  FE_stiffness_N_per_mm  solver_s  inside_old_FE_width_range
+   15.400      953.754      955.828           -2.074                     11.186                     11.428                439.884     1.191                       True
+   16.000      890.299      890.073            0.226                      3.789                      3.762                459.515     1.213                       True
+   16.365      856.257      858.451           -2.194                     -0.180                      0.076                471.413     1.214                       True
+   16.800      819.439      819.708           -0.269                     -4.472                     -4.441                485.642     1.204                       True
+   17.400      773.597      773.632           -0.035                     -9.816                     -9.812                505.149     1.104                      False
+GP nominal peak slope vs width -90.81 MPa/mm
+case  half_width_mm criterion      Pf      mc_se  Pf_FORM    beta  FORM_converged  runout_load_nominal_N  runout_vs_1200_pct  load_at_Pf_0.5_N  load_at_Pf_0.5_vs_1200_pct
+  W0              0   goodman 0.98003 0.00022117  0.97828 -2.0194            True                 1024.3             -14.638            1022.3                     -14.812
+  W0              0    gerber 0.33638 0.00074704   0.3312 0.43659            True                 1250.3                4.19            1247.8                      3.9837
+  W0              0       swt 0.99323 0.00012965  0.99282 -2.4482            True                 940.12             -21.657            938.76                      -21.77
+  W1            0.5   goodman  0.9721 0.00026041  0.96458 -1.8065            True                 1024.3             -14.638            1021.5                     -14.876
+  W1            0.5    gerber 0.34712 0.00075271  0.34463 0.39985            True                 1250.3                4.19            1246.7                      3.8948
+  W1            0.5       swt  0.9909 0.00015012  0.98858 -2.2761            True                 940.12             -21.657            937.85                     -21.845
+  W2              1   goodman 0.94874 0.00034869  0.93129 -1.4855            True                 1024.3             -14.638            1019.4                     -15.053
+  W2              1    gerber 0.37454 0.00076528  0.37191 0.32679            True                 1250.3                4.19            1243.9                      3.6592
+  W2              1       swt 0.98342 0.00020187  0.97694 -1.9944            True                 940.12             -21.657            935.97                     -22.003
+case                            W0     W1     W2
+output      variable                            
+g_gerber    E                0.000  0.000  0.000
+            endurance_ratio  0.802  0.729  0.569
+            force            0.044  0.040  0.032
+            hole_d           0.002  0.002  0.002
+            lever_arm        0.007  0.006  0.005
+            nu               0.000  0.000  0.000
+            thickness        0.038  0.034  0.027
+            uts              0.108  0.099  0.077
+            width            0.000  0.091  0.291
+g_goodman   E                0.000  0.000  0.000
+            endurance_ratio  0.698  0.589  0.397
+            force            0.082  0.069  0.047
+            hole_d           0.004  0.003  0.002
+            lever_arm        0.013  0.011  0.007
+            nu               0.000  0.000  0.000
+            thickness        0.070  0.059  0.040
+            uts              0.135  0.114  0.077
+            width            0.000  0.156  0.431
+peak_stress E                0.000  0.000  0.000
+            endurance_ratio  0.000  0.000  0.000
+            force            0.484  0.232  0.090
+            hole_d           0.024  0.012  0.005
+            lever_arm        0.078  0.037  0.014
+            nu               0.001  0.000  0.000
+            thickness        0.415  0.198  0.075
+            uts              0.000  0.000  0.000
+            width            0.000  0.522  0.817
+case  output   
+W0    g_gerber     endurance_ratio > uts > force
+      g_goodman    endurance_ratio > uts > force
+      g_swt        endurance_ratio > uts > force
+W1    g_gerber     endurance_ratio > uts > width
+      g_goodman    endurance_ratio > width > uts
+      g_swt        endurance_ratio > width > uts
+W2    g_gerber     endurance_ratio > width > uts
+      g_goodman    width > endurance_ratio > uts
+      g_swt        endurance_ratio > width > uts
+criterion case     Pf  Pf_W0    diff  se_paired
+  goodman   W1 0.9721 0.9800 -0.0079     0.0002
+  goodman   W2 0.9487 0.9800 -0.0313     0.0003
+   gerber   W1 0.3471 0.3364  0.0107     0.0005
+   gerber   W2 0.3745 0.3364  0.0382     0.0007
+      swt   W1 0.9909 0.9932 -0.0023     0.0001
+      swt   W2 0.9834 0.9932 -0.0098     0.0002
+criterion  Pf_5input_GP_StageD  Pf_W0_6input_GP  mean_peak_5input  mean_peak_W0_6input  rms_peak_diff_MPa
+  goodman              0.98003          0.98004         856.93686            856.91673            0.22413
+   gerber              0.33651          0.33638         856.93686            856.91673            0.22413
+      swt              0.99324          0.99323         856.93686            856.91673            0.22413

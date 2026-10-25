@@ -1,0 +1,41 @@
+{
+  "critical_node": 4,
+  "critical_node_xyz": [
+    0.0,
+    3.9,
+    0.0
+  ],
+  "n_nodes": 23801,
+  "yields_ASSUMED": [
+    650,
+    750,
+    850
+  ],
+  "peeq_tol_ASSUMED": 1e-05,
+  "uts_end_ASSUMED": 900.0,
+  "eps_end_ASSUMED": 0.1,
+  "ninc_per_leg": 6,
+  "warnings": {
+    "yield650_ASSUMED": [],
+    "yield750_ASSUMED": [],
+    "yield850_ASSUMED": [],
+    "elastic": [
+      "*WARNING in calinput: PEEQ-output requested"
+    ],
+    "nlgeom": []
+  },
+  "increments": {
+    "yield650_ASSUMED": 36,
+    "yield750_ASSUMED": 36,
+    "yield850_ASSUMED": 36,
+    "elastic": 6,
+    "nlgeom": 36
+  },
+  "wall_s": {
+    "yield650_ASSUMED": 249.78280186653137,
+    "yield750_ASSUMED": 248.55410981178284,
+    "yield850_ASSUMED": 248.77695035934448,
+    "elastic": 25.227550506591797,
+    "nlgeom": 220.37477254867554
+  }
+}

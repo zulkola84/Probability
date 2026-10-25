@@ -1,0 +1,10 @@
+method,criterion,top3_ST
+GP,gerber,endurance_ratio > uts > force
+GP,goodman,endurance_ratio > uts > force
+GP,swt,endurance_ratio > uts > force
+closed_form_a_Kt_FE,gerber,endurance_ratio > uts > force
+closed_form_a_Kt_FE,goodman,endurance_ratio > uts > force
+closed_form_a_Kt_FE,swt,endurance_ratio > uts > force
+closed_form_b_Kt_Howland,gerber,endurance_ratio > uts > force
+closed_form_b_Kt_Howland,goodman,endurance_ratio > force > thickness
+closed_form_b_Kt_Howland,swt,endurance_ratio > force > thickness
