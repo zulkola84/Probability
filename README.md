@@ -40,4 +40,4 @@ Probability of not reaching 10^6 cycles: 0.98 (Goodman), 0.34 (Gerber), 0.99 (SW
 
 Zulkifli Ahmad, Faculty of Mechanical and Automotive Engineering Technology, Universiti Malaysia Pahang Al-Sultan Abdullah, 26600 Pekan, Pahang, Malaysia. kifli@umpsa.edu.my. ORCID 0000-0003-3206-567X.
 
-Please cite the article once published. The licence for the code is MIT (see `LICENSE`). The digitised curves in `inputs/` are derived from a published figure and are provided only to reproduce the calibration.
+Archived release: https://doi.org/10.5281/zenodo.23696181. Please cite the article once published. The licence for the code is MIT (see `LICENSE`). The digitised curves in `inputs/` are derived from a published figure and are provided only to reproduce the calibration.

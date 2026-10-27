@@ -3,6 +3,7 @@ message: "If you use this code or data, please cite it as below."
 title: "Probability: code and results for the fatigue reliability of a titanium femoral locking plate"
 type: software
 version: "1.0.0"
+doi: 10.5281/zenodo.23696181
 license: MIT
 repository-code: "https://github.com/zulkola84/Probability"
 abstract: "Calibrated finite element model, Gaussian process surrogate, Monte Carlo, FORM and Sobol analyses of the ASTM F382 four-point bending fatigue test of a grade 4 titanium femoral locking plate, with a model-form variance decomposition. Computational study based on published data only."
