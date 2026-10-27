@@ -1,6 +1,6 @@
 # Probability: fatigue reliability of a titanium femoral locking plate
 
-Code and results for the manuscript *"Model-form uncertainty governs the fatigue reliability of a titanium femoral locking plate"* (submitted to the Journal of the Mechanical Behavior of Biomedical Materials).
+Code and results for the manuscript *"Model-form uncertainty outweighs input scatter in the fatigue reliability of a titanium femoral locking plate"* (submitted to the Journal of the Mechanical Behavior of Biomedical Materials).
 
 The study is computational and uses published data only. It rebuilds the ASTM F382 four-point bending test of a grade 4 titanium plate reported by Bologna et al. (Front. Med. Eng., 2023, doi:10.3389/fmede.2023.1241312) as a calibrated linear-elastic finite element (FE) model, trains a Gaussian process surrogate on 416 FE runs, and propagates input uncertainty through the Goodman, Gerber and Smith-Watson-Topper (SWT) fatigue criteria with Monte Carlo simulation, FORM and Sobol sensitivity analysis. All input spreads are assumed; the plate width (16.365 mm) is calibrated to the published peak stress of 857.8 MPa. No new experiments were performed.
 

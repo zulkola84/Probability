@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Probability: code and results for the fatigue reliability of a titanium femoral locking plate"
+type: software
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/zulkola84/Probability"
+abstract: "Calibrated finite element model, Gaussian process surrogate, Monte Carlo, FORM and Sobol analyses of the ASTM F382 four-point bending fatigue test of a grade 4 titanium femoral locking plate, with a model-form variance decomposition. Computational study based on published data only."
+keywords:
+  - fatigue reliability
+  - finite element
+  - surrogate model
+  - model-form uncertainty
+  - titanium bone plate
+authors:
+  - family-names: Ahmad
+    given-names: Zulkifli
+    orcid: "https://orcid.org/0000-0003-3206-567X"
+    email: kifli@umpsa.edu.my
+    affiliation: "Faculty of Mechanical and Automotive Engineering Technology, Universiti Malaysia Pahang Al-Sultan Abdullah, 26600 Pekan, Pahang, Malaysia"
